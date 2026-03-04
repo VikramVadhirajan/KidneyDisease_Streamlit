@@ -127,9 +127,10 @@ prediction = rfmodel.predict(input_data_scaled)
 prediction_proba = 1-rfmodel.predict_proba(input_data_scaled)[0][1]
 
 
-st.write(f'Churn Probability: {prediction_proba:.2f}')
+st.write(f'Disease Probability: {prediction_proba:.2f}')
 
 if prediction_proba > 0.5:
     st.write('Person is likely to have kidney disease.')
 else:
     st.write('The person is not likely to have kidney disease.')
+
